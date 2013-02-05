@@ -35,7 +35,11 @@ NSLog output is hidden - http://agilewarrior.wordpress.com/2012/02/28/where-is-n
 
 http://stackoverflow.com/questions/146297/hidden-features-of-xcode
 
-Xcode > Preferences > Behaviors
-  > Testing > Starts > [Show] navigator [Log Navigator]
-  > Testing > Fails > Navigate to [current log]
+Make failed tests show up:
+
+    Xcode > Preferences > Behaviors
+      > Testing > Fails > Navigate to [current log]
+
+In Xcode 4 short cut to display and hide console is (command-shift-Y) , this will show the console and debugger below text editor in the same window
+
 

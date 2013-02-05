@@ -31,10 +31,10 @@
 {
     NSRegularExpression *foo = [NSRegularExpression from: @"foo"];
     STAssertTrue([foo isEqual: foo], @"object should be equal to itself");
-    
+
     STAssertTrue([[NSRegularExpression from: @"foo"] isEqual: [NSRegularExpression from: @"foo"]], @"same pattern should be equal");
     STAssertFalse([[NSRegularExpression from: @"foo"] isEqual: [NSRegularExpression from: @"bar"]], @"different pattern should not be equal");
-    
+
 }
 
 - (void)testSuccessfulCreation
@@ -47,7 +47,7 @@
 
     // unsucky way
     NSRegularExpression *regex = [NSRegularExpression from:@"foo"];
-    
+
     STAssertEqualObjects(expected, regex, @"simple creation");
 }
 
@@ -57,20 +57,54 @@
     STAssertNil(regex, @"an invalid regex pattern returns nil");
 }
 
-- (void)testAllMatches
+// I made my own assertArray:equals:because STAssertEquals gives a stupid error when the arrays are different sizes
+-(void)assertArray:(NSArray *)a equals:(NSArray *)b because: (NSString *)reason
+{
+    STAssertEquals([a count], [b count], reason);
+    STAssertEqualObjects(a, b, reason);
+}
+
+- (void)testAllMatches_NoMatch
+{
+    NSRegularExpression *number = [NSRegularExpression from: @"(\\d*\\.\\d*)"];
+    NSArray *matches = [number allMatches:@"foo"];
+    NSArray *expected = [NSArray arrayWithObjects:nil];
+
+    [self assertArray: expected equals: matches because: @"no match"];
+}
+
+- (void)testAllMatches_OneMatch
 {
     NSRegularExpression *number = [NSRegularExpression from: @"(\\d*\\.\\d*)"];
     NSArray *matches = [number allMatches:@"3.14"];
     NSArray *expected = [NSArray arrayWithObjects:@"3.14",nil];
 
-    STAssertEquals([expected count], [matches count], @"arrays should be same size");
-    STAssertEqualObjects(expected, matches, @"one match");
-    
-    for (NSString *string in [[NSRegularExpression from: @"fo*"] allMatches: @"foo bar fooooo"]) {
-        NSLog(@"%@", string);
-    }
+    [self assertArray: expected equals: matches because: @"one match"];
+}
 
-    
+- (void)testAllMatches_SeveralMatches
+{
+    NSRegularExpression *number = [NSRegularExpression from: @"(\\d*\\.\\d*)"];
+    NSArray *matches = [number allMatches:@"3.14 1.23 45.67"];
+    NSArray *expected = [NSArray arrayWithObjects:@"3.14",@"1.23",@"45.67",nil];
+
+    [self assertArray: expected equals: matches because: @"several matches"];
+}
+
+-(void)testAllMatches_CaseSensitive
+{
+    NSRegularExpression *re = [NSRegularExpression from:@"foo"];
+    NSArray *matches = [re allMatches:@"foo Foo"];
+    [self assertArray:matches equals:[NSArray arrayWithObjects:@"foo",nil] because:@"case sensitive"];
+
+}
+
+-(void)testAllMatches_CaseInsensitive
+{
+    NSRegularExpression *re = [NSRegularExpression from:@"(?i)foo"];
+    NSArray *matches = [re allMatches:@"foo Foo"];
+    [self assertArray:matches equals:[NSArray arrayWithObjects:@"foo",@"Foo",nil] because:@"case insensitive"];
+
 }
 
 @end
