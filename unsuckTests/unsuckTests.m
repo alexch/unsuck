@@ -21,7 +21,7 @@
     // http://stackoverflow.com/questions/12308297/some-of-my-unit-tests-tests-are-not-finishing-in-xcode-4-4
     static int loaded = FALSE;
     if (!loaded) {
-        [NSThread sleepForTimeInterval:1.0];
+        [NSThread sleepForTimeInterval:2.0];
         loaded = TRUE;
     }
     [super tearDown];
@@ -57,14 +57,19 @@
     STAssertNil(regex, @"an invalid regex pattern returns nil");
 }
 
-- (void)testMatches
+- (void)testAllMatches
 {
     NSRegularExpression *number = [NSRegularExpression from: @"(\\d*\\.\\d*)"];
-    NSArray *matches = [number matches:@"3.14"];
+    NSArray *matches = [number allMatches:@"3.14"];
     NSArray *expected = [NSArray arrayWithObjects:@"3.14",nil];
 
     STAssertEquals([expected count], [matches count], @"arrays should be same size");
     STAssertEqualObjects(expected, matches, @"one match");
+    
+    for (NSString *string in [[NSRegularExpression from: @"fo*"] allMatches: @"foo bar fooooo"]) {
+        NSLog(@"%@", string);
+    }
+
     
 }
 

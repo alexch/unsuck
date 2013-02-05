@@ -8,8 +8,6 @@
 
 #import "NSRegularExpression+Unsuck.h"
 
-// see http://it.toolbox.com/blogs/macsploitation/extending-classes-in-objectivec-with-categories-27447
-
 @implementation NSRegularExpression (Unsuck)
 
 
@@ -27,7 +25,7 @@
 }
 
 
-- (NSArray *) matches: (NSString *)target
+- (NSArray *) allMatches: (NSString *)target
 {
     NSArray *matchingResults = [self matchesInString:target
                                       options:0
