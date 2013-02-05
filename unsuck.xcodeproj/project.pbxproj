@@ -16,6 +16,8 @@
 		FAF2E16A16C1447E00891A49 /* libunsuck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15116C1447D00891A49 /* libunsuck.a */; };
 		FAF2E17016C1447E00891A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF2E16E16C1447E00891A49 /* InfoPlist.strings */; };
 		FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17216C1447E00891A49 /* unsuckTests.m */; };
+		FAF2E17E16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */; };
+		FAF2E17F16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		FAF2E16F16C1447E00891A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FAF2E17116C1447E00891A49 /* unsuckTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unsuckTests.h; sourceTree = "<group>"; };
 		FAF2E17216C1447E00891A49 /* unsuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unsuckTests.m; sourceTree = "<group>"; };
+		FAF2E17C16C1498600891A49 /* NSRegularExpression+Unsuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Unsuck.h"; sourceTree = "<group>"; };
+		FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Unsuck.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				FAF2E15916C1447D00891A49 /* unsuck.h */,
 				FAF2E15B16C1447D00891A49 /* unsuck.m */,
 				FAF2E15716C1447D00891A49 /* Supporting Files */,
+				FAF2E17C16C1498600891A49 /* NSRegularExpression+Unsuck.h */,
+				FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */,
 			);
 			path = unsuck;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF2E15C16C1447D00891A49 /* unsuck.m in Sources */,
+				FAF2E17E16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */,
+				FAF2E17F16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
