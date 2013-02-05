@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAF2E15516C1447D00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
+		FAF2E15A16C1447D00891A49 /* unsuck.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF2E15916C1447D00891A49 /* unsuck.h */; };
+		FAF2E15C16C1447D00891A49 /* unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E15B16C1447D00891A49 /* unsuck.m */; };
+		FAF2E16416C1447E00891A49 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E16316C1447E00891A49 /* SenTestingKit.framework */; };
+		FAF2E16616C1447E00891A49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E16516C1447E00891A49 /* UIKit.framework */; };
+		FAF2E16716C1447E00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
+		FAF2E16A16C1447E00891A49 /* libunsuck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15116C1447D00891A49 /* libunsuck.a */; };
+		FAF2E17016C1447E00891A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF2E16E16C1447E00891A49 /* InfoPlist.strings */; };
+		FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17216C1447E00891A49 /* unsuckTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAF2E16816C1447E00891A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF2E14916C1447D00891A49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF2E15016C1447D00891A49;
+			remoteInfo = unsuck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAF2E14F16C1447D00891A49 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				FAF2E15A16C1447D00891A49 /* unsuck.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FAF2E15116C1447D00891A49 /* libunsuck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libunsuck.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF2E15416C1447D00891A49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAF2E15816C1447D00891A49 /* unsuck-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unsuck-Prefix.pch"; sourceTree = "<group>"; };
+		FAF2E15916C1447D00891A49 /* unsuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unsuck.h; sourceTree = "<group>"; };
+		FAF2E15B16C1447D00891A49 /* unsuck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unsuck.m; sourceTree = "<group>"; };
+		FAF2E16216C1447E00891A49 /* unsuckTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unsuckTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF2E16316C1447E00891A49 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAF2E16516C1447E00891A49 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FAF2E16D16C1447E00891A49 /* unsuckTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "unsuckTests-Info.plist"; sourceTree = "<group>"; };
+		FAF2E16F16C1447E00891A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAF2E17116C1447E00891A49 /* unsuckTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unsuckTests.h; sourceTree = "<group>"; };
+		FAF2E17216C1447E00891A49 /* unsuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unsuckTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF2E14E16C1447D00891A49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF2E15516C1447D00891A49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF2E15E16C1447D00891A49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF2E16416C1447E00891A49 /* SenTestingKit.framework in Frameworks */,
+				FAF2E16616C1447E00891A49 /* UIKit.framework in Frameworks */,
+				FAF2E16716C1447E00891A49 /* Foundation.framework in Frameworks */,
+				FAF2E16A16C1447E00891A49 /* libunsuck.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAF2E14816C1447D00891A49 = {
+			isa = PBXGroup;
+			children = (
+				FAF2E15616C1447D00891A49 /* unsuck */,
+				FAF2E16B16C1447E00891A49 /* unsuckTests */,
+				FAF2E15316C1447D00891A49 /* Frameworks */,
+				FAF2E15216C1447D00891A49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAF2E15216C1447D00891A49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E15116C1447D00891A49 /* libunsuck.a */,
+				FAF2E16216C1447E00891A49 /* unsuckTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF2E15316C1447D00891A49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E15416C1447D00891A49 /* Foundation.framework */,
+				FAF2E16316C1447E00891A49 /* SenTestingKit.framework */,
+				FAF2E16516C1447E00891A49 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAF2E15616C1447D00891A49 /* unsuck */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E15916C1447D00891A49 /* unsuck.h */,
+				FAF2E15B16C1447D00891A49 /* unsuck.m */,
+				FAF2E15716C1447D00891A49 /* Supporting Files */,
+			);
+			path = unsuck;
+			sourceTree = "<group>";
+		};
+		FAF2E15716C1447D00891A49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E15816C1447D00891A49 /* unsuck-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF2E16B16C1447E00891A49 /* unsuckTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E17116C1447E00891A49 /* unsuckTests.h */,
+				FAF2E17216C1447E00891A49 /* unsuckTests.m */,
+				FAF2E16C16C1447E00891A49 /* Supporting Files */,
+			);
+			path = unsuckTests;
+			sourceTree = "<group>";
+		};
+		FAF2E16C16C1447E00891A49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2E16D16C1447E00891A49 /* unsuckTests-Info.plist */,
+				FAF2E16E16C1447E00891A49 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAF2E15016C1447D00891A49 /* unsuck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF2E17616C1447E00891A49 /* Build configuration list for PBXNativeTarget "unsuck" */;
+			buildPhases = (
+				FAF2E14D16C1447D00891A49 /* Sources */,
+				FAF2E14E16C1447D00891A49 /* Frameworks */,
+				FAF2E14F16C1447D00891A49 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unsuck;
+			productName = unsuck;
+			productReference = FAF2E15116C1447D00891A49 /* libunsuck.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FAF2E16116C1447D00891A49 /* unsuckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF2E17916C1447E00891A49 /* Build configuration list for PBXNativeTarget "unsuckTests" */;
+			buildPhases = (
+				FAF2E15D16C1447D00891A49 /* Sources */,
+				FAF2E15E16C1447D00891A49 /* Frameworks */,
+				FAF2E15F16C1447D00891A49 /* Resources */,
+				FAF2E16016C1447D00891A49 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF2E16916C1447E00891A49 /* PBXTargetDependency */,
+			);
+			name = unsuckTests;
+			productName = unsuckTests;
+			productReference = FAF2E16216C1447E00891A49 /* unsuckTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAF2E14916C1447D00891A49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Alex Chaffee";
+			};
+			buildConfigurationList = FAF2E14C16C1447D00891A49 /* Build configuration list for PBXProject "unsuck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FAF2E14816C1447D00891A49;
+			productRefGroup = FAF2E15216C1447D00891A49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAF2E15016C1447D00891A49 /* unsuck */,
+				FAF2E16116C1447D00891A49 /* unsuckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF2E15F16C1447D00891A49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF2E17016C1447E00891A49 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAF2E16016C1447D00891A49 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAF2E14D16C1447D00891A49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF2E15C16C1447D00891A49 /* unsuck.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF2E15D16C1447D00891A49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAF2E16916C1447E00891A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF2E15016C1447D00891A49 /* unsuck */;
+			targetProxy = FAF2E16816C1447E00891A49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAF2E16E16C1447E00891A49 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF2E16F16C1447E00891A49 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAF2E17416C1447E00891A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAF2E17516C1447E00891A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF2E17716C1447E00891A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/unsuck.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unsuck/unsuck-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAF2E17816C1447E00891A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/unsuck.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unsuck/unsuck-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAF2E17A16C1447E00891A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unsuck/unsuck-Prefix.pch";
+				INFOPLIST_FILE = "unsuckTests/unsuckTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FAF2E17B16C1447E00891A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "unsuck/unsuck-Prefix.pch";
+				INFOPLIST_FILE = "unsuckTests/unsuckTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAF2E14C16C1447D00891A49 /* Build configuration list for PBXProject "unsuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF2E17416C1447E00891A49 /* Debug */,
+				FAF2E17516C1447E00891A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF2E17616C1447E00891A49 /* Build configuration list for PBXNativeTarget "unsuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF2E17716C1447E00891A49 /* Debug */,
+				FAF2E17816C1447E00891A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAF2E17916C1447E00891A49 /* Build configuration list for PBXNativeTarget "unsuckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF2E17A16C1447E00891A49 /* Debug */,
+				FAF2E17B16C1447E00891A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAF2E14916C1447D00891A49 /* Project object */;
+}
