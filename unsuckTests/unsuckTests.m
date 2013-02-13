@@ -58,6 +58,7 @@
 }
 
 // I made my own assertArray:equals:because STAssertEquals gives a stupid error when the arrays are different sizes
+// todo: move into UnsuckAssert or something
 -(void)assertArray:(NSArray *)a equals:(NSArray *)b because: (NSString *)reason
 {
     STAssertEquals([a count], [b count], reason);
