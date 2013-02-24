@@ -79,10 +79,11 @@ http://stackoverflow.com/questions/992901/how-do-i-iterate-over-an-nsarray
 
 Blocks: http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1
 
-## Libraries that attempt to unsuck ObjC (make it less glossolalic)
+## Libraries that attempt to unsuck ObjC
 
  * https://github.com/mikeash/MACollectionUtilities - macros for creating, mapping, filtering, and matching arrays, sets and dicts
  * https://github.com/alexch/unsuck
+ * https://github.com/progrmr/SDK_Utilities
 
 
 ## Testing
@@ -107,4 +108,10 @@ NSLog output is hidden - http://agilewarrior.wordpress.com/2012/02/28/where-is-n
 
 * https://github.com/square/KIF
 * http://rubymaverick.com/blog/2012/10/21/setting-up-kif-integration-tests-for-ios/
+
+# RubyMotion
+
+http://rubysource.com/getting-to-know-rubymotion-with-laurent-sansonetti/
+http://rubysource.com/laurent-sansonetti-on-rubymotion-internals/
+https://github.com/rubymotion/BubbleWrap
 
