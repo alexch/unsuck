@@ -15,6 +15,10 @@ app store review time metrics: http://reviewtimes.shinydevelopment.com/
 
 http://stackoverflow.com/questions/5029267/is-there-any-way-of-asking-an-ios-view-which-of-its-children-has-first-responder
 
+## .gitignore
+http://www.makebetterthings.com/iphone/gitignore-for-ios-projects/
+https://gist.github.com/adamgit/3786883
+
 ## Video
 
 https://developer.apple.com/library/mac/#documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40010188
