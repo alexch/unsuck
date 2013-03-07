@@ -8,9 +8,9 @@ a collection of methods and macros that make Objective C / Cocoa easier to use f
 
 see [Humane Interface](http://martinfowler.com/bliki/HumaneInterface.html) (coined by [Jef Raskin](http://en.wikipedia.org/wiki/The_Humane_Interface))
 
-## Examples
+## Usage
 
-`NSRegularExpression`:
+### `NSRegularExpression`:
 
     [NSRegularExpression from: @"regexp?"]
 
@@ -20,7 +20,7 @@ see [Humane Interface](http://martinfowler.com/bliki/HumaneInterface.html) (coin
         NSLog(@"%@", string); // logs "foo" and then "fooooo"
     }
 
-`UITextField+NextField`:
+### `UITextField+NextField`:
 
 Gives you an outlet to wire up a field to its nextField by control-dragging in IB; you can it to switch focus to the next field in sequence when the user hits return by putting this on your field's delegate:
 
@@ -31,7 +31,7 @@ Gives you an outlet to wire up a field to its nextField by control-dragging in I
      return [textField selectNextField];
    }
 
-`CGCanvas`: a wrapper for `CGContext*` methods:
+### `CGCanvas`: a wrapper for `CGContext*` methods:
 
 Before:
 
