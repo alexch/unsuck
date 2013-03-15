@@ -17,6 +17,9 @@ http://stackoverflow.com/questions/5029267/is-there-any-way-of-asking-an-ios-vie
 
 http://www.hongkiat.com/blog/ios-development-guide-part2-your-first-app/
 
+http://speirs.org/blog/2012/1/2/misconceptions-about-ios-multitasking.html
+
+
 ## icons
 
 http://glyphish.com/
@@ -84,6 +87,14 @@ http://www.scoop.it/t/core-animation-1
 
 animation with blocks: http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1
 
+http://iphonedevsdk.com/forum/iphone-sdk-tutorials/100982-caanimation-tutorial.html
+
+
+http://ajourneywithios.blogspot.com/2011/03/simplified-use-of-nstimer-class-in-ios.html
+force a UIView to re-render is [myView setNeedsDisplay]  - http://stackoverflow.com/questions/1503761/what-is-the-most-robust-way-to-force-a-uiview-to-redraw
+
+
+
 
 ## Core Graphics / Quartz 2D
 
@@ -102,7 +113,17 @@ http://idevhub.com/exploring-iphone-graphics-part-1/ (was from trailsinthesand.c
 http://idevhub.com/exploring-iphone-graphics-part-2/ - bouncing ball animation
 http://idevhub.com/exploring-iphone-graphics-part-3/ - accelerometer
 
+"The fundamental tool used to create paths is the Bézier curve... An application specifies the Bézier curves as a series of short curve segments. In the most common case, there are four points in user space that make up each segment. The curve is set up so that, once the numbers are crunched, the path passes through the first point and the last point. The curve is pulled away from a straight line by the two other points in a way that is both mathematically elegant and ultimately intuitive." http://macdevcenter.com/pub/a/mac/2004/09/28/quartz.html?page=2
 
+http://maniacdev.com/2009/09/6-resources-for-learning-core-graphics/
+http://blogs.oreilly.com/iphone/2008/12/converting-points-and-rectangl.html
+
+http://blogs.oreilly.com/iphone/2008/12/useful-core-graphics-functions.html
+https://github.com/mpw/MPWDrawingContext
+http://www.natestedman.com/post/improving-cgcontext-with-blocks/
+http://boredzo.org/blog/archives/2012-06-01/on-the-api-design-of-cgbitmapcontextcreate
+http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Reference/CGPath/Reference/reference.html
+http://stackoverflow.com/questions/10842646/objective-c-wrapper-class-for-cgcontext
 
 ## Core Image
 
@@ -110,6 +131,10 @@ https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptua
     "The Core Image framework provides: Access to built-in image processing filters; Feature detection capability; Support for automatic image enhancement; The ability to chain multiple filters together to create custom effects.
 https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html
     more than 90 built-in filters on iOS and over 120 on OS X. You set up filters by supplying key-value pairs for a filter’s input parameters. The output of one filter can be the input of another
+
+
+https://github.com/BradLarson/GPUImage
+
 
 ## Games
 
@@ -167,6 +192,10 @@ http://iphonedevelopment.blogspot.nl/2009/04/opengl-es-from-ground-up-part-1-bas
 http://wiki.blender.org/ "integrated application that enables the creation of a diverse range of 2D and 3D content. Blender provides a broad spectrum of modeling, texturing, lighting, animation and video post-processing functionality in one package."
 http://wiki.blender.org/index.php/Doc:2.6/Manual/Materials/Properties/Specular_Shaders
 
+http://maniacdev.com/ios-5-sdk-tutorial-and-guide/glkit/ "GLKit was added in iOS 5 in order to simplify programming of OpenGL ES in iOS apps."
+https://github.com/71squared/GLKit_TD3D
+
+
 ## Audio
 
 http://www.raywenderlich.com/204/audio-101-for-iphone-developers-file-and-data-formats
@@ -210,6 +239,11 @@ http://pragmaticstudio.com/blog/2010/9/15/ios4-blocks-2
  * https://github.com/alexch/unsuck
  * https://github.com/progrmr/SDK_Utilities
  * https://github.com/snej/MYUtilities
+
+
+http://vgable.com/blog/2010/08/19/the-most-useful-objective-c-code-ive-ever-written/comment-page-1/
+http://jens.ayton.se/blag/almost-elegant-cave-man-debugging/
+
 
 ## Testing
 
