@@ -10,6 +10,7 @@
 		FA0E186116CBD92F00071B9C /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
 		FA0E186216CBD92F00071B9C /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
 		FA45B0BD173FC89D0090A633 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */; };
+		FA45B11B173FE15E0090A633 /* SenTestCase+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */; };
 		FAF2702516E916DF0095F667 /* CGCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2702416E916DF0095F667 /* CGCanvas.m */; };
 		FAF2E15516C1447D00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
 		FAF2E15A16C1447D00891A49 /* unsuck.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF2E15916C1447D00891A49 /* unsuck.h */; };
@@ -51,6 +52,8 @@
 		FA0E185F16CBD92F00071B9C /* UITextField+NextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+NextField.h"; sourceTree = "<group>"; };
 		FA0E186016CBD92F00071B9C /* UITextField+NextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NextField.m"; sourceTree = "<group>"; };
 		FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FA45B119173FE15E0090A633 /* SenTestCase+Unsuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SenTestCase+Unsuck.h"; sourceTree = "<group>"; };
+		FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SenTestCase+Unsuck.m"; sourceTree = "<group>"; };
 		FAF2702216E916690095F667 /* cgcanvas.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = cgcanvas.rb; sourceTree = "<group>"; };
 		FAF2702316E916DF0095F667 /* CGCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGCanvas.h; sourceTree = "<group>"; };
 		FAF2702416E916DF0095F667 /* CGCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGCanvas.m; sourceTree = "<group>"; };
@@ -96,9 +99,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA45B118173FE15E0090A633 /* unsuck-testing */ = {
+			isa = PBXGroup;
+			children = (
+				FA45B119173FE15E0090A633 /* SenTestCase+Unsuck.h */,
+				FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */,
+			);
+			path = "unsuck-testing";
+			sourceTree = "<group>";
+		};
 		FAF2E14816C1447D00891A49 = {
 			isa = PBXGroup;
 			children = (
+				FA45B118173FE15E0090A633 /* unsuck-testing */,
 				FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */,
 				FAF2E18016C18A4F00891A49 /* ios-notes.md */,
 				FAF2702216E916690095F667 /* cgcanvas.rb */,
@@ -274,6 +287,7 @@
 				FAF2E17E16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */,
 				FA0E186116CBD92F00071B9C /* UITextField+NextField.m in Sources */,
 				FAF2702516E916DF0095F667 /* CGCanvas.m in Sources */,
+				FA45B11B173FE15E0090A633 /* SenTestCase+Unsuck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

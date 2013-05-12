@@ -62,7 +62,7 @@ After:
 
 Yes, there are unit tests. [Read them](unsuckTests/) for more examples.
 
-There are also unsucky extensions for you to use in *your* unit tests, like `SenTestCase+Unsuck`. Not quite sure how to name or use them yet, though.
+There are also unsucky extensions for you to use in *your* unit tests, like `SenTestCase+Unsuck`. They're in a subdirectory called unsuck-testing -- XCode doesn't like it when regular code references the SenTestingKit library, so putting them in a subdirectory may make it easier to exclude them from your deploy target(s).
 
 ## git submodule usage
 
