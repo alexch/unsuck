@@ -58,12 +58,38 @@ After:
 
 (see <http://stackoverflow.com/questions/10842646/objective-c-wrapper-class-for-cgcontext> for discussion)
 
-
-
 ## Unit Tests
 
 Yes, there are unit tests. [Read them](unsuckTests/) for more examples.
 
-## Notes
+There are also unsucky extensions for you to use in *your* unit tests, like `SenTestCase+Unsuck`. Not quite sure how to name or use them yet, though.
+
+## git submodule usage
+
+XCode is really annoying about putting multiple projects in the same workspace. As an alternative you may want to use git submodules, which are also really annoying.
+
+To add this as a submodule to your project:
+
+    git submodule add git://github.com/alexch/unsuch.git unsuck
+
+that will add a `.gitmodules` file which points to the git url and to the specific commit within that file.
+
+When you clone a repo with submodules, in addition to `git clone` you also have to run
+
+    git submodule init
+    git submodule update
+
+And if you pull a revision that includes a change to the submodule, in addition to `git pull` (or `git merge`) you must again run
+
+    git submodule update
+
+If you happen to see the error
+
+    fatal: reference isn’t a tree
+
+then it means someone changed the submodule reference but failed to push the new commit up to the public repo. In that case, in the words of Scott Chacon, "Then, you e-mail that guy and yell at him."
+
+
+## iOS Notes
 
 I'm also using this repo to hold my [notes on learning IOS and Objective C](ios-notes.md). Contains many links to things that flabbergasted me.
