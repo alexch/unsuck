@@ -19,6 +19,10 @@ http://www.hongkiat.com/blog/ios-development-guide-part2-your-first-app/
 
 http://speirs.org/blog/2012/1/2/misconceptions-about-ios-multitasking.html
 
+No longer necessary or called: -[UIViewController viewDidUnload]
+
+$ macerror -43
+Mac OS error -43 (fnfErr): File not found
 
 ## icons
 
@@ -79,11 +83,24 @@ http://www.raywenderlich.com/2454/how-to-use-uiview-animation-tutorial
 http://www.raywenderlich.com/5478/uiview-animation-tutorial-practical-recipes
 http://maniacdev.com/2011/08/open-source-extensive-core-animation-techniques-demo/
 
+
+http://stackoverflow.com/questions/4979192/ios-using-uiviews-drawrect-vs-its-layers-delagate-drawlayerincontext "Always use drawRect:, and never use a UIView as the drawing delegate for any CALayer." and "While the use of drawRect is common, it's a practice that has been discouraged since at least 2002/2003, IIRC"
+
+https://developer.apple.com/library/ios/#qa/qa1708/_index.html#//apple_ref/doc/uid/DTS40010245 Q:  What can I do to improve my image drawing performance (CGContextDrawImage, UIImage/-drawInRect:, etc)?
+  * Every UIView is backed with a CALayer and images as layer contents remain in memory as long as the CALayer stays in the hierarchy.
+  * One way to do it would be applying a rotation transform to the Current Transform Matrix (CGContextRotateCTM) and redrawing the image (CGContextDrawImage) in the UIView's -drawRect: method at every animation step. However, a much more efficient way is to set the image as the contents property of the backing CALayer, and then animate the layer's transform property to achieve the rotating animation.
+  * If you can, adjust your resource art so that the image size (in pixels) is the same as its displayed size (in pixels), meaning you would provide different image sets for iPhone/iPod touch (image.png), iPhone 4 (image@2x.png), and iPad (image-iPad.png). Further, you could cache the images yourself by drawing into a bitmap context and caching the image you create from the context.
+
+http://adcdownload.apple.com//wwdc_2010/wwdc_2010_video_assets__pdfs/135__advanced_performance_optimization_on_iphone_os_part_1.pdf
+http://adcdownload.apple.com//wwdc_2012/wwdc_2012_session_pdfs/session_238__ios_app_performance_graphics_and_animations.pdf (from https://developer.apple.com/videos/wwdc/2012/) -- THIS IS GREAT
+
+
 http://robots.thoughtbot.com/post/36591648724/designing-for-ios-graphics-performance
 
 http://khanlou.com/2012/08/skbounceanimation/
 http://www.scoop.it/t/core-animation-1
-
+http://khanlou.com/2012/01/cakeyframeanimation-make-it-bounce/
+http://stackoverflow.com/questions/537425/halting-in-progress-cakeyframeanimation/537952#537952
 
 animation with blocks: http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1
 
@@ -93,7 +110,34 @@ http://iphonedevsdk.com/forum/iphone-sdk-tutorials/100982-caanimation-tutorial.h
 http://ajourneywithios.blogspot.com/2011/03/simplified-use-of-nstimer-class-in-ios.html
 force a UIView to re-render is [myView setNeedsDisplay]  - http://stackoverflow.com/questions/1503761/what-is-the-most-robust-way-to-force-a-uiview-to-redraw
 
+the key in CALayer: (void)addAnimation:(CAAnimation *)anim forKey:(NSString *)key; is not necessarily the same as the one in CAPropertyAnimation: (id)animationWithKeyPath:(NSString *)path -- though if the latter is nil, it gets filled in if you pass it to the former
 
+If you want animated properties to stick when the animation ends, you have to either
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+or have the presentation layer send the new values into the model layer (or model itself) in the setter.
+
+The CAAnimation and CALayer classes are key-value coding compliant container classes, which means that you can set values for arbitrary keys. http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW2
+
+bounds vs. frame in layers: Layers have an implicit frame that is a function of the position, bounds, anchorPoint, and transform properties. Setting a new frame rectangle changes the layer's position and bounds properties appropriately, but the frame itself is not stored. When a new frame rectangle is specified the bounds origin is undisturbed, while the bounds size is set to the size of the frame. The layer's position is set to the proper location relative to the anchor point. When you get the frame property value, it is calculated relative to the position, bounds, and anchorPoint properties.
+
+CAShapeLayer
+
+
+Animation Timing:
+http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/Animation_Types_Timing/Articles/Timing.html#//apple_ref/doc/uid/TP40006670-SW1
+
+A CADisplayLink object is a timer object that allows your application to synchronize its drawing to the refresh rate of the display.
+https://zearfoss.wordpress.com/2011/03/09/drawing-with-cadisplaylink/
+http://www.ananseproductions.com/game-loops-on-ios/
+
+
+### Particle Effects
+
+http://blog.argteam.com/tag/caemitterlayer/
+https://developer.apple.com/library/mac/#samplecode/Fire/Listings/AppController_m.html#//apple_ref/doc/uid/DTS40009036-AppController_m-DontLinkElementID_4
+http://www.vigorouscoding.com/mac-apps/particle-playground/
+http://www.vigorouscoding.com/2013/02/particle-image-gets-mirrored-by-uikit-particle-system/
 
 
 ## Core Graphics / Quartz 2D
@@ -125,6 +169,12 @@ http://boredzo.org/blog/archives/2012-06-01/on-the-api-design-of-cgbitmapcontext
 http://developer.apple.com/library/ios/#documentation/GraphicsImaging/Reference/CGPath/Reference/reference.html
 http://stackoverflow.com/questions/10842646/objective-c-wrapper-class-for-cgcontext
 
+http://en.wikipedia.org/wiki/Kochanek-Bartels_spline
+
+tendrils grass http://js1k.com/2013-spring/demo/1547
+http://nodebox.net/code/index.php/Tendrils
+
+
 ## Core Image
 
 https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_intro/ci_intro.html
@@ -135,8 +185,15 @@ https://developer.apple.com/library/mac/#documentation/GraphicsImaging/Conceptua
 
 https://github.com/BradLarson/GPUImage
 
+http://stackoverflow.com/questions/4334233/how-to-capture-uiview-to-uiimage-without-loss-of-quality-on-retina-display?rq=1
+
+
 
 ## Games
+
+
+Essential Game Technologies for iOS, Pt 1 & 2 at https://developer.apple.com/videos/wwdc/2011/
+http://adcdownload.apple.com//wwdc_2011/adc_on_itunes__wwdc11_sessions__pdf/403_iosgamespart2_repeat.pdf
 
 http://snej.github.com/2007/12/20/GeekGameBoard/
 http://bitbucket.org/snej/geekgameboard/
@@ -159,8 +216,6 @@ http://www.koboldtouch.com/
 http://iphonegamekit.com/
 
 http://www.cocos2d-iphone.org/
-http://chipmunk-physics.net/  "For iOS development, Chipmunk Pro includes "Objective-Chipmunk", an Objective-C wrapper around all Chipmunk functionality. This provides greatly simplified memory management (especially when combined with automatic reference counting), an object oriented syntax, convenience classes for multi-touch input, and more." $249  "With the popular Chipmunk Indie license, you can have access to the C and Objective-C APIs (including ARC, object management, and utility classes!) at a very Indie-friendly price." $99
-http://box2d.org/
 
 http://www.raywenderlich.com/25736/how-to-make-a-simple-iphone-game-with-cocos2d-2-x-tutorial
 Cocos2D works with points, not pixels. On Retina display devices, 1 point = 2 pixels, so 1136×640 pixels = 568×320 points. This is quite handy, because if you use points in your game, your coordinates can be the same for both retina and non-retina displays!
@@ -184,6 +239,27 @@ http://www.raywenderlich.com/3611/how-to-make-a-space-shooter-iphone-game
 http://www.71squared.com/particledesigner
 http://www.vickiwenderlich.com/ - free game art, tutorials
 
+ShinyCocos - Ruby interpreter + Cocos2d bindings -
+  http://www.cocos2d-iphone.org/wiki/doku.php/shinycocos%3Afaq
+  https://github.com/funkaster/shinycocos
+
+http://gamua.com/sparrow/
+http://www.openframeworks.cc/
+
+http://realtimecollisiondetection.net/
+http://bulletphysics.org/wordpress/
+
+
+## Physics
+http://chipmunk-physics.net/  "For iOS development, Chipmunk Pro includes "Objective-Chipmunk", an Objective-C wrapper around all Chipmunk functionality. This provides greatly simplified memory management (especially when combined with automatic reference counting), an object oriented syntax, convenience classes for multi-touch input, and more." $249  "With the popular Chipmunk Indie license, you can have access to the C and Objective-C APIs (including ARC, object management, and utility classes!) at a very Indie-friendly price." $99
+http://box2d.org/
+https://developer.apple.com/library/mac/#samplecode/OpenCL_NBody_Simulation_Example/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008471-Intro-DontLinkElementID_2
+
+
+http://gafferongames.com/game-physics/  -- awesome tutorial, build a little physics engine one step at a time
+http://gafferongames.com/game-physics/fix-your-timestep/
+http://gafferongames.com/game-physics/spring-physics/
+
 ## 3D
 
 OpenGL for Embedded Systems (OpenGL ES)
@@ -195,6 +271,22 @@ http://wiki.blender.org/index.php/Doc:2.6/Manual/Materials/Properties/Specular_S
 http://maniacdev.com/ios-5-sdk-tutorial-and-guide/glkit/ "GLKit was added in iOS 5 in order to simplify programming of OpenGL ES in iOS apps."
 https://github.com/71squared/GLKit_TD3D
 
+http://unity3d.com/
+
+
+http://stackoverflow.com/questions/7128829/could-i-get-a-basic-explanation-of-catransform3didentity
+http://chortle.ccsu.edu/vectorlessons/vectorIndex.html
+
+
+## Fonts
+
+http://stackoverflow.com/questions/360751/can-i-embed-a-custom-font-in-an-iphone-application
+
+http://stackoverflow.com/questions/4386367/drawing-text-with-core-graphics
+
+https://developer.apple.com/library/mac/#documentation/graphicsimaging/conceptual/drawingwithquartz2d/dq_text/dq_text.html
+
+
 
 ## Audio
 
@@ -204,6 +296,105 @@ http://www.raywenderlich.com/259/audio-101-for-iphone-developers-playing-audio-p
 
 http://thirdcog.eu/apps/cfxr
 
+http://stackoverflow.com/questions/1002838/audio-on-the-iphone
+
+http://adcdownload.apple.com//wwdc_2010/wwdc_2010_video_assets__pdfs/412__audio_development_for_iphone_os_part_1.pdf
+
+http://benbritten.com/2008/11/06/openal-sound-on-the-iphone/ :
+    the quickest (and easiest) way to make the iPhone spit out some sound is to use the audio system services:
+
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"soundEffect1" ofType:@"caf"];
+    NSURL * afUrl = [NSURL fileURLWithPath:path];
+    UInt32 soundID;
+    AudioServicesCreateSystemSoundID((CFURLRef)afUrl,&soundID);
+    AudioServicesPlaySystemSound (soundID);
+
+    this works well for making your interface buttons click and simple UI interaction stuff. However, it is absolutely shite for anything more complicated than that (think: a game)... For better control of the sound, you will require either openAL or audioUnits or the audioQueue.
+
+http://stackoverflow.com/questions/2067267/where-to-start-with-audio-synthesis-on-iphone
+http://atastypixel.com/blog/using-remoteio-audio-unit/
+
+http://audacity.sourceforge.net/download/mac
+
+Use an MPMusicPlayerController object, or music player, to play media items from the device iPod library.
+To play multiple sounds with best performance, or to efficiently play sounds while the iPod is playing in the background, use linear PCM (uncompressed) or IMA4 (compressed) audio.
+
+http://stackoverflow.com/questions/984729/how-can-i-determine-how-loud-a-wav-file-will-sound
+http://stackoverflow.com/questions/9162509/how-to-calculate-dbr-from-the-volume-on-ios
+
+http://stackoverflow.com/questions/632718/native-iphone-audio-format
+
+http://stackoverflow.com/questions/8016765/avaudioplayer-not-playing-any-sound OMFG
+
+http://www.mailinglistarchive.com/coreaudio-api@lists.apple.com/msg07024.html
+
+http://supermegaultragroovy.com/2009/10/06/drawing-waveforms/
+
+http://stackoverflow.com/questions/6594810/press-a-button-it-makes-a-sound-hit-button-fast-and-sound-playback-pops-and-cli
+
+Here's some sample code which may help getting pcm data from a compressed file: cogs.susx.ac.uk/users/nc81/code.html
+
+http://benbritten.com/2008/11/06/openal-sound-on-the-iphone/
+
+http://lists.apple.com/archives/coreaudio-api/2008/Dec/msg00173.html -- generate a sin tone and stick it in a buffer using RemoteIO AudioUnit
+
+The AUTimePitch unit can be used to speed up or slow down audio data without changing pitch to facilitate for example, the playing back of an audio book faster or slower than real-time. AUTimePitchTest demonstrates how to build an Audio Unit Graph connecting an AUConverter to a MultiChannel Mixer to the AUTimePitch audio unit then to the Default Output unit.
+
+RemoteIO Audio Unit + the 3D Mixer Audio Unit + ExtAudioFile => mutliple sounds simultaneously
+https://developer.apple.com/library/ios/#samplecode/iPhoneMultichannelMixerTest/Introduction/Intro.html
+
+http://supermegaultragroovy.com/products/FuzzMeasure/
+
+http://stackoverflow.com/questions/3326665/example-of-using-audio-queue-services
+
+synthesizing - http://lists.apple.com/archives/coreaudio-api/2008/Dec/msg00173.html
+
+https://developer.apple.com/library/ios/#samplecode/iPhoneMultichannelMixerTest/Introduction/Intro.html
+
+http://developer.apple.com/library/ios/#DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html
+
+http://developer.apple.com/library/ios/#DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html
+  Use the Media Player framework to play songs, audio books, or audio podcasts from a user’s iPod library. For details, see Media Player Framework Reference, iPod Library Access Programming Guide, and the AddMusic sample code project.
+  Use the AV Foundation framework to play and record audio using a simple Objective-C interface. For details, see AV Foundation Framework Reference and the avTouch sample code project.
+  Use the Audio Toolbox framework to play audio with synchronization capabilities, access packets of incoming audio, parse audio streams, convert audio formats, and record audio with access to individual packets. For details, see Audio Toolbox Framework Reference and the SpeakHere sample code project.
+  Use the Audio Unit framework to connect to and use audio processing plug-ins. For details, see Audio Unit Hosting Guide for iOS.
+  Use the OpenAL framework to provide positional audio playback in games and other applications. iOS supports OpenAL 1.1. For information on OpenAL, see the OpenAL website, OpenAL FAQ for iPhone OS, and the oalTouch sample code project.
+
+  The open-sourced OpenAL audio API, available in iOS in the OpenAL framework, provides an interface optimized for positioning sounds in a stereo field during playback. Playing, positioning, and moving sounds works just as it does on other platforms. OpenAL also lets you mix sounds. OpenAL uses the I/O unit for playback, resulting in the lowest latency.
+  For all of these reasons, OpenAL is your best choice for playing sounds in game applications on iOS-based devices. However, OpenAL is also a good choice for general iOS application audio playback needs.
+
+
+
+
+## GarageBand Instruments
+
+http://mac.softpedia.com/get/Audio/Boldt-24-Pack.shtml
+http://www.d.umn.edu/~bold0070/projects/instruments/
+http://sonicamigos.com/polyphonticsgb/
+http://www.hammersound.net/
+
+
+
+### Core Audio
+
+AudioToolbox
+ - CoreAudioClock.h: Lets you designate a timing source for synchronizing applications or devices.
+
+AVFoundation
+ - available in iOS only
+ - AVAudioPlayer.h: Defines an interface for playing audio from a file or from memory.
+
+http://stackoverflow.com/questions/10329291/play-a-short-sound-in-ios
+
+### OpenAL
+
+http://benbritten.com/2008/11/06/openal-sound-on-the-iphone/
+
+http://connect.creativelabs.com/openal/Documentation/OpenAL_Programmers_Guide.pdf
+
+http://www.71squared.com/2009/05/iphone-game-programming-tutorial-9-sound-manager/
+
+
 # Objective C
 
 http://projectmultiplexer.com/2011/03/31/the-beauty-of-objective-c/
@@ -212,6 +403,27 @@ http://benscheirman.com/2011/04/private-categories-in-objective-c
 http://blog.carbonfive.com/2012/01/23/monkey-patching-ios-with-objective-c-categories-part-1-simple-extensions-and-overrides/
 
 use objc_setAssociatedObject/objc_getAssociatedObject inside a category implementation to store a simulated instance variable http://stackoverflow.com/questions/2846218/how-do-i-use-objc-setassociatedobject-objc-getassociatedobject-inside-an-object http://stackoverflow.com/questions/1347779/how-to-navigate-through-textfields-next-done-buttons
+
+All memory for a newly allocated object is initialized to 0 (except for isa), so don't clutter up the init method by re-initializing variables to 0 or nil.
+
+Apple's Coding Guidelines for Cocoa - http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html
+Google's Objective-C Style Guide - http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml
+
+http://stackoverflow.com/questions/1043820/what-programming-skills-i-need-to-become-an-iphone-developer
+
+CS 193P iPhone Application Development - http://www.stanford.edu/class/cs193p
+https://itunes.apple.com/us/course/coding-together-developing/id593208016
+
+When declaring instance variables, don't forget the braces!
+    @implementation Sound
+    {
+        float _volume;  // instance var
+    }
+    float _volume;      // static var!!
+
+http://www.davidhamrick.com/2012/02/12/Adding-Properties-to-an-Objective-C-Category.html
+
+http://stackoverflow.com/questions/1063229/objective-c-static-class-level-variables
 
 ## ARC and memory management
 
@@ -223,6 +435,14 @@ A weak reference does not extend the lifetime of the object it points to, and au
 
 Exceptions are unsafe: http://stackoverflow.com/questions/4648952/objective-c-exceptions (unless they make the whole program exit?)
 
+atomic/nonatomic: http://stackoverflow.com/questions/3227176/error-writable-atomic-property-cannot-pair-a-synthesized-setter-getter-with-a-u
+
+http://stackoverflow.com/questions/12665292/objective-c-custom-setter
+http://stackoverflow.com/questions/1306897/how-to-provide-additional-custom-implementation-of-accessor-methods-when-using
+
+http://adcdownload.apple.com//wwdc_2012/wwdc_2012_session_pdfs/session_242__ios_app_performance_memory.pdf
+
+
 ## Misc
 
 http://it.toolbox.com/blogs/macsploitation/extending-classes-in-objectivec-with-categories-27447
@@ -231,6 +451,7 @@ http://stackoverflow.com/questions/992901/how-do-i-iterate-over-an-nsarray
 
 Blocks: http://pragmaticstudio.com/blog/2010/7/28/ios4-blocks-1
 http://pragmaticstudio.com/blog/2010/9/15/ios4-blocks-2
+http://www.eosgarden.com/en/articles/objc-blocks/
 
 
 ## Libraries that attempt to unsuck ObjC
@@ -239,15 +460,21 @@ http://pragmaticstudio.com/blog/2010/9/15/ios4-blocks-2
  * https://github.com/alexch/unsuck
  * https://github.com/progrmr/SDK_Utilities
  * https://github.com/snej/MYUtilities
-
+ * http://sstoolk.it/documentation/index.html - SSToolkit is a collection of well-documented iOS classes for making life easier by solving common problems all iOS developers face. Some really handy classes are SSCollectionView, SSGradientView, and many more
 
 http://vgable.com/blog/2010/08/19/the-most-useful-objective-c-code-ive-ever-written/comment-page-1/
 http://jens.ayton.se/blag/almost-elegant-cave-man-debugging/
 
+## Ads
 
-## Testing
+## Files
 
-### SenTest
+http://stackoverflow.com/questions/10221290/how-to-delete-icloud-documents/15026829
+
+
+# Testing
+
+## SenTest
 
 STAssert is macros
 
