@@ -70,7 +70,7 @@ XCode is really annoying about putting multiple projects in the same workspace. 
 
 To add this as a submodule to your project:
 
-    git submodule add git://github.com/alexch/unsuch.git unsuck
+    git submodule add git://github.com/alexch/unsuck.git unsuck
 
 that will add a `.gitmodules` file which points to the git url and to the specific commit within that file.
 
