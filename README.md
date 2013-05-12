@@ -70,7 +70,7 @@ XCode is really annoying about putting multiple projects in the same workspace. 
 
 To add this as a submodule to your project:
 
-    git submodule add git://github.com/alexch/unsuck.git unsuck
+    git submodule add https://github.com/alexch/unsuck.git unsuck
 
 that will add a `.gitmodules` file which points to the git url and to the specific commit within that file.
 
@@ -89,6 +89,11 @@ If you happen to see the error
 
 then it means someone changed the submodule reference but failed to push the new commit up to the public repo. In that case, in the words of Scott Chacon, "Then, you e-mail that guy and yell at him."
 
+And when you (I) make a change inside the submodule repo, to push it, use
+
+    git push https://github.com/alexch/unsuck.git
+
+it seems to go to master alright.
 
 ## iOS Notes
 
