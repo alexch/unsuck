@@ -95,6 +95,8 @@ And when you (I) make a change inside the submodule repo, to push it, use
 
 it seems to go to master alright.
 
+Once the submodule is in your repo, I suggest adding ("Add Files To 'Project'...") the subfolders named "`unsuck`" and "`unsuck-testing`" rather than adding the entire top-level "`unsuck`" directory. Otherwise XCode may get confused by the included project file and test files. You can open the `unsuck.xcodeproj` file in a separate window if you want to read this readme or run the unsuck unit tests.
+
 ## iOS Notes
 
 I'm also using this repo to hold my [notes on learning IOS and Objective C](ios-notes.md). Contains many links to things that flabbergasted me.
