@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 input = File.read("/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h")
-output_dir = "#{File.dirname(__FILE__)/unsuck"
+output_dir = "#{File.dirname(__FILE__)}/unsuck"
 
 # split into sections delineated by /* comments
 sections = input.split(/^\/\* /)
@@ -73,7 +73,7 @@ sections.each do |section|
     end
 
     header = <<-CODE
-/* #{matches[:comment]}
+/* #{matches[:comment].strip}
    Wraps #{matches[:name]}. */
 #{signature};
     CODE
@@ -84,7 +84,7 @@ sections.each do |section|
         call_params.map{|p|p[:name]}.join(", ") +
         ")"
     impl = <<-CODE
-/* #{matches[:comment]} */
+/* #{matches[:comment].strip} */
 #{signature}
 {
     #{"return " if matches[:returns] != 'void'}#{call};
