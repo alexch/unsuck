@@ -5,6 +5,7 @@
 @interface CGCanvas : NSObject
 
 +(CGCanvas *)current;
+@property (nonatomic) CGContextRef context;
 
 -(id)initWithContext: (CGContextRef)context;
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 input = File.read("/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h")
-output_dir = "./unsuck"
+output_dir = "#{File.dirname(__FILE__)/unsuck"
 
 # split into sections delineated by /* comments
 sections = input.split(/^\/\* /)
@@ -105,6 +105,8 @@ File.open(header_file, 'w') {|f| f.write(<<-CODE)}
 
 +(CGCanvas *)current;
 
+@property (nonatomic) CGContextRef context;
+
 -(id)initWithContext: (CGContextRef)context;
 
 #{headers.join("\n")}
@@ -117,7 +119,7 @@ File.open(impl_file, 'w') {|f| f.write(<<-CODE)}
 /* Generated from CGContext.h */
 
 #import "CGCanvas.h"
-#include <UIKit/UIGraphics.h>
+#import <UIKit/UIGraphics.h>
 
 @implementation CGCanvas
 
@@ -131,7 +133,7 @@ CGContextRef _context;
 -(id)initWithContext: (CGContextRef)context
 {
 	if( (self=[super init]) ) {
-        _context = context;
+        self.context = context;
     }
     return self;
 }
