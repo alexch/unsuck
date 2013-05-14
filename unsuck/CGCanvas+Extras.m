@@ -10,12 +10,30 @@
 
 @implementation CGCanvas (Extras)
 
+#pragma mark lines
+
 -(void)drawLineFromPoint:(CGPoint)fromPoint toPoint:(CGPoint)toPoint
 {
     [self moveToPoint_x:fromPoint.x y:fromPoint.y];
     [self addLineToPoint_x:toPoint.x y:toPoint.y];
     [self drawPath: kCGPathFillStroke];
 }
+
+#pragma mark rects
+
+-(id)fillRect:(CGRect)rect withColor:(UIColor*)color
+{
+    [self setFillColorWithColor: color.CGColor];
+    [self fillRect: rect];
+    return self;
+}
+
+#pragma mark paths
+
+// Silly UIBezierPath doesn't know how to stroke in a non-current context.
+// It also persists its lineWidth.
+
+
 
 -(void)fillPath:(UIBezierPath*)path
 {
@@ -24,12 +42,27 @@
     UIGraphicsPopContext();
 }
 
+-(void)strokePath:(UIBezierPath*)path withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth
+{
+    [self saveGState];
+    {
+        [self setStrokeColorWithColor:color.CGColor];
+        CGFloat originalLineWidth = path.lineWidth;
+        path.lineWidth = lineWidth;
+        [self strokePath:path];
+        path.lineWidth = originalLineWidth;
+    }
+    [self restoreGState];
+}
+
 -(void)strokePath:(UIBezierPath*)path
 {
     UIGraphicsPushContext(self.context);
     [path stroke];
     UIGraphicsPopContext();
 }
+
+#pragma mark text
 
 // todo: remember current font and encoding
 // maybe use UIFont
