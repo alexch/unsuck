@@ -16,7 +16,7 @@
 // returns random integer (unsigned long) between 0 < n < max
 +(unsigned long)int: (unsigned long)max;
 
-// returns random integer (unsigned long) between 0 < n < max
+// returns random double between 0 < n < max
 +(double)double: (double)max;
 
 
