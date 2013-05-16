@@ -91,6 +91,15 @@ https://developer.apple.com/library/ios/#qa/qa1708/_index.html#//apple_ref/doc/u
   * One way to do it would be applying a rotation transform to the Current Transform Matrix (CGContextRotateCTM) and redrawing the image (CGContextDrawImage) in the UIView's -drawRect: method at every animation step. However, a much more efficient way is to set the image as the contents property of the backing CALayer, and then animate the layer's transform property to achieve the rotating animation.
   * If you can, adjust your resource art so that the image size (in pixels) is the same as its displayed size (in pixels), meaning you would provide different image sets for iPhone/iPod touch (image.png), iPhone 4 (image@2x.png), and iPad (image-iPad.png). Further, you could cache the images yourself by drawing into a bitmap context and caching the image you create from the context.
 
+
+View/Layer frame/bounds/position shuffle: http://stackoverflow.com/questions/13976219/how-do-i-set-an-lldb-watchpoint-on-a-property-of-self-view/13980286#13980286
+  The view controller references its view from its _view instance variable.
+  The view doesn't store its frame directly. It just returns its layer's `frame'.
+  The view references its layer from its _layer instance variable.
+  The layer doesn't store the frame either. It computes its frame from its bounds, position, anchorPoint, and transform. The size is part of bounds.
+  The layer doesn't store its bounds directly in an instance variable. Instead, its layer instance variable references an instance of a private C++ class, CA::Layer. The member layout of this class is undocumented.
+
+
 http://adcdownload.apple.com//wwdc_2010/wwdc_2010_video_assets__pdfs/135__advanced_performance_optimization_on_iphone_os_part_1.pdf
 http://adcdownload.apple.com//wwdc_2012/wwdc_2012_session_pdfs/session_238__ios_app_performance_graphics_and_animations.pdf (from https://developer.apple.com/videos/wwdc/2012/) -- THIS IS GREAT
 
