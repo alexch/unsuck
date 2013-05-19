@@ -10,11 +10,17 @@
 
 @implementation SenTestCase (Unsuck)
 
-// I made my own assertDate:closeTo:because
+// I made my own assertArray:equals:because STAssertEquals gives a stupid error when the arrays are different sizes
+-(void)assertArray:(NSArray *)a equals:(NSArray *)b because: (NSString *)reason
+{
+    STAssertEquals([a count], [b count], reason);
+    STAssertEqualObjects(a, b, reason);
+}
+
+// I made my own assertDate:closeTo:because:
 -(void)assertDate:(NSDate *)a closeTo:(NSDate *)b because: (NSString *)reason
 {
     NSTimeInterval interval = [a timeIntervalSinceDate:b];
-    NSLog(@"interval: %f", interval);
     STAssertTrue(ABS(interval) < 1.0, reason);
 }
 

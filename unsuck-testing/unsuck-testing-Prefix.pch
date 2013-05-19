@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'unsuck-testing' target in the 'unsuck-testing' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

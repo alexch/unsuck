@@ -18,4 +18,7 @@
 // waits until the block returns true(ish) (non-zero), checking every .1 sec
 -(void)waitUntil: (BOOL (^)(void))block because:(NSString *)reason;
 
+// I made my own assertArray:equals:because STAssertEquals gives a stupid error when the arrays are different sizes
+-(void)assertArray:(NSArray *)a equals:(NSArray *)b because: (NSString *)reason;
+
 @end

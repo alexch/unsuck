@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Alex Chaffee. All rights reserved.
 //
 
+#import <UIKit/UIKit.h> // for UIColor & UIBezierPath
 #import "CGCanvas.h"
 
 @interface CGCanvas (Extras)

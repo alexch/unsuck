@@ -8,25 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		FA0E186116CBD92F00071B9C /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
-		FA0E186216CBD92F00071B9C /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
 		FA45B0BD173FC89D0090A633 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */; };
-		FA45B11B173FE15E0090A633 /* SenTestCase+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */; };
+		FA9A5A3D174991C7004DCC1A /* SenTestCase+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */; };
+		FA9A5A46174991E1004DCC1A /* CGCanvas+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A3F174991E1004DCC1A /* CGCanvas+Extras.m */; };
+		FA9A5A47174991E1004DCC1A /* NSArray+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A41174991E1004DCC1A /* NSArray+Unsuck.m */; };
+		FA9A5A48174991E1004DCC1A /* NSString+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A43174991E1004DCC1A /* NSString+Unsuck.m */; };
+		FA9A5A49174991E1004DCC1A /* Randy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A45174991E1004DCC1A /* Randy.m */; };
+		FA9A5A4C1749926C004DCC1A /* NSArray+UnsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A4B1749926C004DCC1A /* NSArray+UnsuckTests.m */; };
+		FA9A5A4E174996BD004DCC1A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9A5A4D174996BD004DCC1A /* UIKit.framework */; };
+		FA9A5A6617499A5A004DCC1A /* libunsuck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15116C1447D00891A49 /* libunsuck.a */; };
+		FA9A5A6717499B75004DCC1A /* CGCanvas+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A3F174991E1004DCC1A /* CGCanvas+Extras.m */; };
+		FA9A5A6817499B75004DCC1A /* CGCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2702416E916DF0095F667 /* CGCanvas.m */; };
+		FA9A5A6917499B75004DCC1A /* NSArray+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A41174991E1004DCC1A /* NSArray+Unsuck.m */; };
+		FA9A5A6A17499B75004DCC1A /* NSRegularExpression+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */; };
+		FA9A5A6B17499B75004DCC1A /* NSString+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A43174991E1004DCC1A /* NSString+Unsuck.m */; };
+		FA9A5A6C17499B75004DCC1A /* Randy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A45174991E1004DCC1A /* Randy.m */; };
+		FA9A5A6D17499B75004DCC1A /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
+		FA9A5A6E17499BB2004DCC1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */; };
+		FA9A5A7117499C41004DCC1A /* NSRegularExpression+UnsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */; };
 		FAF2702516E916DF0095F667 /* CGCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2702416E916DF0095F667 /* CGCanvas.m */; };
 		FAF2E15516C1447D00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
 		FAF2E15A16C1447D00891A49 /* unsuck.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF2E15916C1447D00891A49 /* unsuck.h */; };
 		FAF2E15C16C1447D00891A49 /* unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E15B16C1447D00891A49 /* unsuck.m */; };
 		FAF2E16416C1447E00891A49 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E16316C1447E00891A49 /* SenTestingKit.framework */; };
-		FAF2E16616C1447E00891A49 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E16516C1447E00891A49 /* UIKit.framework */; };
 		FAF2E16716C1447E00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
-		FAF2E16A16C1447E00891A49 /* libunsuck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15116C1447D00891A49 /* libunsuck.a */; };
 		FAF2E17016C1447E00891A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF2E16E16C1447E00891A49 /* InfoPlist.strings */; };
 		FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17216C1447E00891A49 /* unsuckTests.m */; };
 		FAF2E17E16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */; };
-		FAF2E17F16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FAF2E16816C1447E00891A49 /* PBXContainerItemProxy */ = {
+		FA9A5A5117499759004DCC1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAF2E14916C1447D00891A49 /* Project object */;
 			proxyType = 1;
@@ -54,6 +66,19 @@
 		FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FA45B119173FE15E0090A633 /* SenTestCase+Unsuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SenTestCase+Unsuck.h"; sourceTree = "<group>"; };
 		FA45B11A173FE15E0090A633 /* SenTestCase+Unsuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SenTestCase+Unsuck.m"; sourceTree = "<group>"; };
+		FA9A5A3E174991E1004DCC1A /* CGCanvas+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGCanvas+Extras.h"; sourceTree = "<group>"; };
+		FA9A5A3F174991E1004DCC1A /* CGCanvas+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGCanvas+Extras.m"; sourceTree = "<group>"; };
+		FA9A5A40174991E1004DCC1A /* NSArray+Unsuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Unsuck.h"; sourceTree = "<group>"; };
+		FA9A5A41174991E1004DCC1A /* NSArray+Unsuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Unsuck.m"; sourceTree = "<group>"; };
+		FA9A5A42174991E1004DCC1A /* NSString+Unsuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Unsuck.h"; sourceTree = "<group>"; };
+		FA9A5A43174991E1004DCC1A /* NSString+Unsuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Unsuck.m"; sourceTree = "<group>"; };
+		FA9A5A44174991E1004DCC1A /* Randy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Randy.h; sourceTree = "<group>"; };
+		FA9A5A45174991E1004DCC1A /* Randy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Randy.m; sourceTree = "<group>"; };
+		FA9A5A4A1749926C004DCC1A /* NSArray+UnsuckTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UnsuckTests.h"; sourceTree = "<group>"; };
+		FA9A5A4B1749926C004DCC1A /* NSArray+UnsuckTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+UnsuckTests.m"; sourceTree = "<group>"; };
+		FA9A5A4D174996BD004DCC1A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FA9A5A6F17499C41004DCC1A /* NSRegularExpression+UnsuckTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+UnsuckTests.h"; sourceTree = "<group>"; };
+		FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+UnsuckTests.m"; sourceTree = "<group>"; };
 		FAF2702216E916690095F667 /* cgcanvas.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = cgcanvas.rb; sourceTree = "<group>"; };
 		FAF2702316E916DF0095F667 /* CGCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGCanvas.h; sourceTree = "<group>"; };
 		FAF2702416E916DF0095F667 /* CGCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGCanvas.m; sourceTree = "<group>"; };
@@ -89,10 +114,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9A5A6E17499BB2004DCC1A /* CoreGraphics.framework in Frameworks */,
+				FA9A5A4E174996BD004DCC1A /* UIKit.framework in Frameworks */,
 				FAF2E16416C1447E00891A49 /* SenTestingKit.framework in Frameworks */,
-				FAF2E16616C1447E00891A49 /* UIKit.framework in Frameworks */,
 				FAF2E16716C1447E00891A49 /* Foundation.framework in Frameworks */,
-				FAF2E16A16C1447E00891A49 /* libunsuck.a in Frameworks */,
+				FA9A5A6617499A5A004DCC1A /* libunsuck.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,15 +137,16 @@
 		FAF2E14816C1447D00891A49 = {
 			isa = PBXGroup;
 			children = (
-				FA45B118173FE15E0090A633 /* unsuck-testing */,
 				FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */,
+				FA9A5A4D174996BD004DCC1A /* UIKit.framework */,
 				FAF2E18016C18A4F00891A49 /* ios-notes.md */,
-				FAF2702216E916690095F667 /* cgcanvas.rb */,
 				FAF2E18116C18A4F00891A49 /* README.md */,
-				FAF2E15616C1447D00891A49 /* unsuck */,
-				FAF2E16B16C1447E00891A49 /* unsuckTests */,
+				FAF2702216E916690095F667 /* cgcanvas.rb */,
 				FAF2E15316C1447D00891A49 /* Frameworks */,
 				FAF2E15216C1447D00891A49 /* Products */,
+				FAF2E15616C1447D00891A49 /* unsuck */,
+				FA45B118173FE15E0090A633 /* unsuck-testing */,
+				FAF2E16B16C1447E00891A49 /* unsuckTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,15 +172,23 @@
 		FAF2E15616C1447D00891A49 /* unsuck */ = {
 			isa = PBXGroup;
 			children = (
+				FA9A5A3E174991E1004DCC1A /* CGCanvas+Extras.h */,
+				FA9A5A3F174991E1004DCC1A /* CGCanvas+Extras.m */,
 				FAF2702316E916DF0095F667 /* CGCanvas.h */,
 				FAF2702416E916DF0095F667 /* CGCanvas.m */,
+				FA9A5A40174991E1004DCC1A /* NSArray+Unsuck.h */,
+				FA9A5A41174991E1004DCC1A /* NSArray+Unsuck.m */,
+				FAF2E17C16C1498600891A49 /* NSRegularExpression+Unsuck.h */,
+				FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */,
+				FA9A5A42174991E1004DCC1A /* NSString+Unsuck.h */,
+				FA9A5A43174991E1004DCC1A /* NSString+Unsuck.m */,
+				FA9A5A44174991E1004DCC1A /* Randy.h */,
+				FA9A5A45174991E1004DCC1A /* Randy.m */,
 				FA0E185F16CBD92F00071B9C /* UITextField+NextField.h */,
 				FA0E186016CBD92F00071B9C /* UITextField+NextField.m */,
 				FAF2E15916C1447D00891A49 /* unsuck.h */,
 				FAF2E15B16C1447D00891A49 /* unsuck.m */,
 				FAF2E15716C1447D00891A49 /* Supporting Files */,
-				FAF2E17C16C1498600891A49 /* NSRegularExpression+Unsuck.h */,
-				FAF2E17D16C1498600891A49 /* NSRegularExpression+Unsuck.m */,
 			);
 			path = unsuck;
 			sourceTree = "<group>";
@@ -169,8 +204,12 @@
 		FAF2E16B16C1447E00891A49 /* unsuckTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA9A5A4A1749926C004DCC1A /* NSArray+UnsuckTests.h */,
+				FA9A5A4B1749926C004DCC1A /* NSArray+UnsuckTests.m */,
 				FAF2E17116C1447E00891A49 /* unsuckTests.h */,
 				FAF2E17216C1447E00891A49 /* unsuckTests.m */,
+				FA9A5A6F17499C41004DCC1A /* NSRegularExpression+UnsuckTests.h */,
+				FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */,
 				FAF2E16C16C1447E00891A49 /* Supporting Files */,
 			);
 			path = unsuckTests;
@@ -217,7 +256,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FAF2E16916C1447E00891A49 /* PBXTargetDependency */,
+				FA9A5A5217499759004DCC1A /* PBXTargetDependency */,
 			);
 			name = unsuckTests;
 			productName = unsuckTests;
@@ -287,7 +326,10 @@
 				FAF2E17E16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */,
 				FA0E186116CBD92F00071B9C /* UITextField+NextField.m in Sources */,
 				FAF2702516E916DF0095F667 /* CGCanvas.m in Sources */,
-				FA45B11B173FE15E0090A633 /* SenTestCase+Unsuck.m in Sources */,
+				FA9A5A46174991E1004DCC1A /* CGCanvas+Extras.m in Sources */,
+				FA9A5A47174991E1004DCC1A /* NSArray+Unsuck.m in Sources */,
+				FA9A5A48174991E1004DCC1A /* NSString+Unsuck.m in Sources */,
+				FA9A5A49174991E1004DCC1A /* Randy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,19 +337,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9A5A3D174991C7004DCC1A /* SenTestCase+Unsuck.m in Sources */,
 				FAF2E17316C1447E00891A49 /* unsuckTests.m in Sources */,
-				FAF2E17F16C1498600891A49 /* NSRegularExpression+Unsuck.m in Sources */,
-				FA0E186216CBD92F00071B9C /* UITextField+NextField.m in Sources */,
+				FA9A5A4C1749926C004DCC1A /* NSArray+UnsuckTests.m in Sources */,
+				FA9A5A6717499B75004DCC1A /* CGCanvas+Extras.m in Sources */,
+				FA9A5A6817499B75004DCC1A /* CGCanvas.m in Sources */,
+				FA9A5A6917499B75004DCC1A /* NSArray+Unsuck.m in Sources */,
+				FA9A5A6A17499B75004DCC1A /* NSRegularExpression+Unsuck.m in Sources */,
+				FA9A5A6B17499B75004DCC1A /* NSString+Unsuck.m in Sources */,
+				FA9A5A6C17499B75004DCC1A /* Randy.m in Sources */,
+				FA9A5A6D17499B75004DCC1A /* UITextField+NextField.m in Sources */,
+				FA9A5A7117499C41004DCC1A /* NSRegularExpression+UnsuckTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FAF2E16916C1447E00891A49 /* PBXTargetDependency */ = {
+		FA9A5A5217499759004DCC1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAF2E15016C1447D00891A49 /* unsuck */;
-			targetProxy = FAF2E16816C1447E00891A49 /* PBXContainerItemProxy */;
+			targetProxy = FA9A5A5117499759004DCC1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
