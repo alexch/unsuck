@@ -24,6 +24,7 @@ No longer necessary or called: -[UIViewController viewDidUnload]
 $ macerror -43
 Mac OS error -43 (fnfErr): File not found
 
+
 ## icons
 
 http://glyphish.com/
@@ -286,8 +287,7 @@ http://unity3d.com/
 http://stackoverflow.com/questions/7128829/could-i-get-a-basic-explanation-of-catransform3didentity
 http://chortle.ccsu.edu/vectorlessons/vectorIndex.html
 
-
-## Fonts
+## Text and Fonts
 
 http://stackoverflow.com/questions/360751/can-i-embed-a-custom-font-in-an-iphone-application
 
@@ -295,7 +295,10 @@ http://stackoverflow.com/questions/4386367/drawing-text-with-core-graphics
 
 https://developer.apple.com/library/mac/#documentation/graphicsimaging/conceptual/drawingwithquartz2d/dq_text/dq_text.html
 
+http://stackoverflow.com/questions/1054558/vertically-align-text-within-a-uilabel/1054681
 
+https://github.com/nicklockwood/FXLabel - FXLabel improves upon the standard UILabel by providing a subclass that supports soft shadows, inner shadow and gradient fill, and which can easily be used in place of any standard UILabel.
+    also NSString method calculates the size of a rendered string
 
 ## Audio
 
