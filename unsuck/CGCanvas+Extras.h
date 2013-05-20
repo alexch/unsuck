@@ -22,11 +22,10 @@
 -(id)strokeEllipse:(CGRect)rect withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth;
 
 -(void)fillPath:(UIBezierPath*)path;
--(void)fillPath:(UIBezierPath*)path  withColor:(UIColor*);
+-(void)fillPath:(UIBezierPath*)path withColor:(UIColor*)color;
 -(void)strokePath:(UIBezierPath*)path;
 -(void)strokePath:(UIBezierPath*)path withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth;
 
 -(float) textWidth:(NSString *)text;
-
 
 @end
