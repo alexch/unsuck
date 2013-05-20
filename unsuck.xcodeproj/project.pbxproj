@@ -26,6 +26,7 @@
 		FA9A5A6D17499B75004DCC1A /* UITextField+NextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0E186016CBD92F00071B9C /* UITextField+NextField.m */; };
 		FA9A5A6E17499BB2004DCC1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA45B0BC173FC89D0090A633 /* CoreGraphics.framework */; };
 		FA9A5A7117499C41004DCC1A /* NSRegularExpression+UnsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */; };
+		FA9A5A8A1749AD6A004DCC1A /* NSString+UnsuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A5A891749AD6A004DCC1A /* NSString+UnsuckTests.m */; };
 		FAF2702516E916DF0095F667 /* CGCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2702416E916DF0095F667 /* CGCanvas.m */; };
 		FAF2E15516C1447D00891A49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2E15416C1447D00891A49 /* Foundation.framework */; };
 		FAF2E15A16C1447D00891A49 /* unsuck.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF2E15916C1447D00891A49 /* unsuck.h */; };
@@ -79,6 +80,8 @@
 		FA9A5A4D174996BD004DCC1A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA9A5A6F17499C41004DCC1A /* NSRegularExpression+UnsuckTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+UnsuckTests.h"; sourceTree = "<group>"; };
 		FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+UnsuckTests.m"; sourceTree = "<group>"; };
+		FA9A5A881749AD6A004DCC1A /* NSString+UnsuckTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+UnsuckTests.h"; sourceTree = "<group>"; };
+		FA9A5A891749AD6A004DCC1A /* NSString+UnsuckTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UnsuckTests.m"; sourceTree = "<group>"; };
 		FAF2702216E916690095F667 /* cgcanvas.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = cgcanvas.rb; sourceTree = "<group>"; };
 		FAF2702316E916DF0095F667 /* CGCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGCanvas.h; sourceTree = "<group>"; };
 		FAF2702416E916DF0095F667 /* CGCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGCanvas.m; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				FA9A5A4B1749926C004DCC1A /* NSArray+UnsuckTests.m */,
 				FAF2E17116C1447E00891A49 /* unsuckTests.h */,
 				FAF2E17216C1447E00891A49 /* unsuckTests.m */,
+				FA9A5A881749AD6A004DCC1A /* NSString+UnsuckTests.h */,
+				FA9A5A891749AD6A004DCC1A /* NSString+UnsuckTests.m */,
 				FA9A5A6F17499C41004DCC1A /* NSRegularExpression+UnsuckTests.h */,
 				FA9A5A7017499C41004DCC1A /* NSRegularExpression+UnsuckTests.m */,
 				FAF2E16C16C1447E00891A49 /* Supporting Files */,
@@ -348,6 +353,7 @@
 				FA9A5A6C17499B75004DCC1A /* Randy.m in Sources */,
 				FA9A5A6D17499B75004DCC1A /* UITextField+NextField.m in Sources */,
 				FA9A5A7117499C41004DCC1A /* NSRegularExpression+UnsuckTests.m in Sources */,
+				FA9A5A8A1749AD6A004DCC1A /* NSString+UnsuckTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
