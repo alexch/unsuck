@@ -15,9 +15,6 @@
 {
     NSArray * abc = @[@"a", @"b", @"c"];
     NSArray * bcd = @[@"b", @"c", @"d"];
-
-    NSLog(@"responds: %i", [abc respondsToSelector:@selector(minus:)]);
-
     NSArray * after = [abc minus:bcd];
     STAssertEqualObjects(after, @[@"a"], @"minus makes an array with all elements in self that are not in other");
 }
