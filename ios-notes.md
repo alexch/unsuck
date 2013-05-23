@@ -24,6 +24,7 @@ No longer necessary or called: -[UIViewController viewDidUnload]
 $ macerror -43
 Mac OS error -43 (fnfErr): File not found
 
+http://stackoverflow.com/questions/8100054/no-exception-stack-trace-in-console-under-xcode-4-2-ios-5
 
 ## icons
 
