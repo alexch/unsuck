@@ -17,6 +17,12 @@
     STAssertEqualObjects(a, b, reason);
 }
 
+-(void)assertSet:(NSSet *)a equals:(NSSet *)b because: (NSString *)reason
+{
+    STAssertEquals([a count], [b count], reason);
+    STAssertEqualObjects(a, b, reason);
+}
+
 // I made my own assertDate:closeTo:because:
 -(void)assertDate:(NSDate *)a closeTo:(NSDate *)b because: (NSString *)reason
 {

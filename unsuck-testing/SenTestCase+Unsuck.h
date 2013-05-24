@@ -20,5 +20,6 @@
 
 // I made my own assertArray:equals:because STAssertEquals gives a stupid error when the arrays are different sizes
 -(void)assertArray:(NSArray *)a equals:(NSArray *)b because: (NSString *)reason;
+-(void)assertSet:(NSSet *)a equals:(NSSet *)b because: (NSString *)reason;
 
 @end
