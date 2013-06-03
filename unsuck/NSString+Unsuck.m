@@ -17,4 +17,21 @@
      stringByTrimmingCharactersInSet:
      [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
+
+-(NSArray*)lines
+{
+    return [self componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];
+}
+
+-(NSArray*)split: (NSString*)characters;
+{
+    return [self componentsSeparatedByCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:characters]];
+}
+
+-(NSArray*)split
+{
+    return [self componentsSeparatedByCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+
 @end

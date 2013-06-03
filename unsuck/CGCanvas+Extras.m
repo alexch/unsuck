@@ -28,22 +28,68 @@
     return self;
 }
 
+-(id)strokeRect:(CGRect)rect withColor:(UIColor*)color;
+{
+    [self setStrokeColorWithColor: color.CGColor];
+    [self strokeRect: rect];
+    return self;
+}
+
+-(id)strokeRect:(CGRect)rect withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth;
+{
+    [self setStrokeColorWithColor: color.CGColor];
+    [self setLineWidth:lineWidth];
+    [self strokeRect: rect];
+    return self;
+}
+
+#pragma mark ellipses
+
+-(id)fillEllipse:(CGRect)rect withColor:(UIColor*)color
+{
+    [self setFillColorWithColor: color.CGColor];
+    [self fillEllipseInRect: rect];
+    return self;
+}
+
+-(id)strokeEllipse:(CGRect)rect withColor:(UIColor*)color;
+{
+    [self setStrokeColorWithColor: color.CGColor];
+    [self strokeEllipseInRect: rect];
+    return self;
+}
+
+-(id)strokeEllipse:(CGRect)rect withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth;
+{
+    [self setStrokeColorWithColor: color.CGColor];
+    [self setLineWidth:lineWidth];
+    [self strokeEllipseInRect: rect];
+    return self;
+}
+
 #pragma mark paths
-
-// Silly UIBezierPath doesn't know how to stroke in a non-current context.
-// It also persists its lineWidth.
-
-
 
 -(void)fillPath:(UIBezierPath*)path
 {
+    // Silly UIBezierPath doesn't know how to stroke in a non-current context, so we have to push & pop it.
     UIGraphicsPushContext(self.context);
     [path fill];
     UIGraphicsPopContext();
 }
 
+-(void)fillPath:(UIBezierPath*)path withColor:(UIColor*)color;
+{
+    [self saveGState];
+    {
+        [self setFillColorWithColor:color.CGColor];
+        [self fillPath:path];
+    }
+    [self restoreGState];
+}
+
 -(void)strokePath:(UIBezierPath*)path withColor:(UIColor*)color andLineWidth:(CGFloat)lineWidth
 {
+    // Silly UIBezierPath persists its lineWidth, so we have to remember and restore it.
     [self saveGState];
     {
         [self setStrokeColorWithColor:color.CGColor];

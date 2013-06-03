@@ -11,5 +11,8 @@
 @interface NSString (Unsuck)
 
 -(NSString*)trim;
+-(NSArray*)lines;
+-(NSArray*)split: (NSString*)characters;
+-(NSArray*)split;
 
 @end

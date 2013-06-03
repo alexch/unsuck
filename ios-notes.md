@@ -30,6 +30,7 @@ do it later:
 
 App distribution:    https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
 
+http://stackoverflow.com/questions/8100054/no-exception-stack-trace-in-console-under-xcode-4-2-ios-5
 
 ## events
 
@@ -284,6 +285,7 @@ http://bulletphysics.org/wordpress/
 
 
 ## Physics
+
 http://chipmunk-physics.net/  "For iOS development, Chipmunk Pro includes "Objective-Chipmunk", an Objective-C wrapper around all Chipmunk functionality. This provides greatly simplified memory management (especially when combined with automatic reference counting), an object oriented syntax, convenience classes for multi-touch input, and more." $249  "With the popular Chipmunk Indie license, you can have access to the C and Objective-C APIs (including ARC, object management, and utility classes!) at a very Indie-friendly price." $99
 http://box2d.org/
 https://developer.apple.com/library/mac/#samplecode/OpenCL_NBody_Simulation_Example/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008471-Intro-DontLinkElementID_2
@@ -310,8 +312,7 @@ http://unity3d.com/
 http://stackoverflow.com/questions/7128829/could-i-get-a-basic-explanation-of-catransform3didentity
 http://chortle.ccsu.edu/vectorlessons/vectorIndex.html
 
-
-## Fonts
+## Text and Fonts
 
 http://stackoverflow.com/questions/360751/can-i-embed-a-custom-font-in-an-iphone-application
 
@@ -319,7 +320,10 @@ http://stackoverflow.com/questions/4386367/drawing-text-with-core-graphics
 
 https://developer.apple.com/library/mac/#documentation/graphicsimaging/conceptual/drawingwithquartz2d/dq_text/dq_text.html
 
+http://stackoverflow.com/questions/1054558/vertically-align-text-within-a-uilabel/1054681
 
+https://github.com/nicklockwood/FXLabel - FXLabel improves upon the standard UILabel by providing a subclass that supports soft shadows, inner shadow and gradient fill, and which can easily be used in place of any standard UILabel.
+    also NSString method calculates the size of a rendered string
 
 ## Audio
 
