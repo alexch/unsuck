@@ -11,6 +11,7 @@
 @interface SenTestCase (Unsuck)
 
 -(void)assertDate:(NSDate *)a closeTo:(NSDate *)b because: (NSString *)reason;
+-(void)assertNumber:(double)a closeTo:(double)b by:(double)maxDelta because: (NSString *)reason;
 
 // todo: move this out to a more general category (not just for tests)
 -(void)sleep: (float)seconds;

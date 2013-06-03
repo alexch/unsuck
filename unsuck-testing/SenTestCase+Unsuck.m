@@ -30,6 +30,12 @@
     STAssertTrue(ABS(interval) < 1.0, reason);
 }
 
+-(void)assertNumber:(double)a closeTo:(double)b by:(double)maxDelta because: (NSString *)reason
+{
+    double interval = a - b;
+    STAssertTrue(ABS(interval) <= maxDelta, [NSString stringWithFormat:@"%@: interval=%f", reason, interval]);
+}
+
 -(void)sleep: (float)seconds
 {
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:seconds]];
