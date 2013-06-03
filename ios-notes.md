@@ -24,6 +24,26 @@ No longer necessary or called: -[UIViewController viewDidUnload]
 $ macerror -43
 Mac OS error -43 (fnfErr): File not found
 
+do it later:
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+  });
+
+App distribution:    https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html
+
+
+## events
+
+http://stackoverflow.com/questions/4961386/event-handling-for-ios-how-hittestwithevent-and-pointinsidewithevent-are-r :
+  The implementation of hitTest:withEvent: in UIResponder does the following:
+    It calls pointInside:withEvent: of self
+    If the return is NO, hitTest:withEvent: returns nil. the end of the story.
+    If the return is YES, it sends hitTest:withEvent: messages to its subviews. it starts from the top-level subview, and continues to other views until a subview returns a non-nil object, or all subviews receive the message.
+    If a subview returns a non-nil object in the first time, the first hitTest:withEvent: returns that object. the end of the story.
+    If no subview returns a non-nil object, the first hitTest:withEvent: returns self
+    This process repeats recursively, so normally the leaf view of the view hierarchy is returned eventually.
+  However, you might override hitTest:withEvent to do something differently. In many cases, overriding pointInside:withEvent: is simpler and still provides enough options to tweak event handling in your application.
+
+
 ## icons
 
 http://glyphish.com/
@@ -83,6 +103,7 @@ http://www.raywenderlich.com/2454/how-to-use-uiview-animation-tutorial
 http://www.raywenderlich.com/5478/uiview-animation-tutorial-practical-recipes
 http://maniacdev.com/2011/08/open-source-extensive-core-animation-techniques-demo/
 
+http://watchingapple.com/2008/04/core-animation-paths/
 
 http://stackoverflow.com/questions/4979192/ios-using-uiviews-drawrect-vs-its-layers-delagate-drawlayerincontext "Always use drawRect:, and never use a UIView as the drawing delegate for any CALayer." and "While the use of drawRect is common, it's a practice that has been discouraged since at least 2002/2003, IIRC"
 
@@ -182,6 +203,9 @@ http://en.wikipedia.org/wiki/Kochanek-Bartels_spline
 
 tendrils grass http://js1k.com/2013-spring/demo/1547
 http://nodebox.net/code/index.php/Tendrils
+
+http://www.raywenderlich.com/2106/core-graphics-101-arcs-and-paths
+
 
 
 ## Core Image
@@ -320,6 +344,8 @@ http://benbritten.com/2008/11/06/openal-sound-on-the-iphone/ :
 
     this works well for making your interface buttons click and simple UI interaction stuff. However, it is absolutely shite for anything more complicated than that (think: a game)... For better control of the sound, you will require either openAL or audioUnits or the audioQueue.
 
+My recommendation is the AVAudioPlayer -- it's gotten a bit better since iOS 4 -- can synchronize start time of several players
+
 http://stackoverflow.com/questions/2067267/where-to-start-with-audio-synthesis-on-iphone
 http://atastypixel.com/blog/using-remoteio-audio-unit/
 
@@ -372,7 +398,12 @@ http://developer.apple.com/library/ios/#DOCUMENTATION/AudioVideo/Conceptual/Mult
   The open-sourced OpenAL audio API, available in iOS in the OpenAL framework, provides an interface optimized for positioning sounds in a stereo field during playback. Playing, positioning, and moving sounds works just as it does on other platforms. OpenAL also lets you mix sounds. OpenAL uses the I/O unit for playback, resulting in the lowest latency.
   For all of these reasons, OpenAL is your best choice for playing sounds in game applications on iOS-based devices. However, OpenAL is also a good choice for general iOS application audio playback needs.
 
-
+calculating bpm etc:
+http://stackoverflow.com/questions/79445/beats-per-minute-from-real-time-audio-input
+http://www.surina.net/soundtouch/index.html
+http://soundtouchdotnet.codeplex.com/
+http://www.ericbattenberg.com/school/rhythm_poster.pdf
+http://www.ee.columbia.edu/~dpwe/papers/Laroche01-swing.pdf
 
 
 ## GarageBand Instruments
@@ -405,6 +436,8 @@ http://www.71squared.com/2009/05/iphone-game-programming-tutorial-9-sound-manage
 
 
 # Objective C
+
+http://cocoadevcentral.com/d/learn_objectivec/
 
 http://projectmultiplexer.com/2011/03/31/the-beauty-of-objective-c/
 http://lethain.com/filtering-arrays-in-objective-c/
