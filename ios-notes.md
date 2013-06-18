@@ -228,6 +228,7 @@ http://stackoverflow.com/questions/4334233/how-to-capture-uiview-to-uiimage-with
 
 Essential Game Technologies for iOS, Pt 1 & 2 at https://developer.apple.com/videos/wwdc/2011/
 http://adcdownload.apple.com//wwdc_2011/adc_on_itunes__wwdc11_sessions__pdf/403_iosgamespart2_repeat.pdf
+x__ # stupid textmate formatting
 
 http://snej.github.com/2007/12/20/GeekGameBoard/
 http://bitbucket.org/snej/geekgameboard/
@@ -283,6 +284,9 @@ http://www.openframeworks.cc/
 http://realtimecollisiondetection.net/
 http://bulletphysics.org/wordpress/
 
+### game ad networks
+
+https://www.chartboost.com/
 
 ## Physics
 
@@ -401,6 +405,8 @@ http://developer.apple.com/library/ios/#DOCUMENTATION/AudioVideo/Conceptual/Mult
 
   The open-sourced OpenAL audio API, available in iOS in the OpenAL framework, provides an interface optimized for positioning sounds in a stereo field during playback. Playing, positioning, and moving sounds works just as it does on other platforms. OpenAL also lets you mix sounds. OpenAL uses the I/O unit for playback, resulting in the lowest latency.
   For all of these reasons, OpenAL is your best choice for playing sounds in game applications on iOS-based devices. However, OpenAL is also a good choice for general iOS application audio playback needs.
+
+Whoa: http://createdigitalmusic.com/2011/10/one-line-of-code-into-music-now-with-visuals/
 
 calculating bpm etc:
 http://stackoverflow.com/questions/79445/beats-per-minute-from-real-time-audio-input
